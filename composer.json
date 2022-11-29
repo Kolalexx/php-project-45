@@ -1,5 +1,6 @@
 {
     "name": "hexlet/code",
+    "bin": ["bin/brain-games"],
     "description": "project-brain-games",
     "autoload": {
         "psr-4": {
