@@ -22,7 +22,11 @@ function firstGame()
             line('Correct!');
             $index += 1;
         } else {
-            line("'yes' is wrong answer ;(. Correct answer was 'no'.");
+            if (($numbers % 2) === 0) {
+                line("'$answer' is wrong answer ;(. Correct answer was 'yes'.");
+            } else {
+                line("'$answer' is wrong answer ;(. Correct answer was 'no'.");
+            }
             return line("Let's try again, %s!", $name);
         }
     }
