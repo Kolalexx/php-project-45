@@ -1,16 +1,16 @@
 <?php
 
-namespace BrainGames\src\Engine;
-
-require_once __DIR__ . '/../../vendor/autoload.php';
-
-use function src\Engine;
+namespace BrainGames\src\Calc;
 
 use function cli\line;
 use function cli\prompt;
 
-function calculator()
+function gameSecond()
 {
+    line('Welcome to the Brain Game!');
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
+    
     line('What is the result of the expression?');
     $index = 0;
     $minNumber = 0;
@@ -43,6 +43,6 @@ function calculator()
             return line("Let's try again, %s!", $name);
         }
     }
+
+    line("Congratulations, %s!", $name);
 }
-
-
