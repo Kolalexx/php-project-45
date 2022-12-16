@@ -1,22 +1,20 @@
 <?php
 
-namespace BrainGames\src\Engine;
-
-require_once __DIR__ . '/../../vendor/autoload.php';
+namespace BrainGames\src\Games\Gcd;
 
 use function cli\line;
 use function cli\prompt;
 
 function randomNumbers1()
 {
-    $minNumber = 0;
+    $minNumber = 1;
     $maxNumber1 = 50;
     return (rand($minNumber, $maxNumber1));
 }
 
 function randomNumbers2()
 {
-    $minNumber = 0;
+    $minNumber = 1;
     $maxNumber2 = 10;
     return (rand($minNumber, $maxNumber2));
 }
@@ -38,7 +36,7 @@ function gameThird()
         } elseif ($numbers1 > $numbers2) {
             $i = 1;
             while ($i <= $numbers2) {
-                if ($numbers1 % $i === 0) {
+                if ($numbers1 % $i === 0 && $numbers2 % $i === 0) {
                     $result = $i;
                     $i += 1;
                 } else {
@@ -48,7 +46,7 @@ function gameThird()
         } else {
             $i = 1;
             while ($i <= $numbers1) {
-                if ($numbers2 % $i === 0) {
+                if ($numbers2 % $i === 0 && $numbers1 % $i === 0) {
                     $result = $i;
                     $i += 1;
                 } else {
