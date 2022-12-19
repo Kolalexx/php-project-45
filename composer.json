@@ -4,7 +4,8 @@
         "bin/brain-games",
         "bin/brain-even",
         "bin/brain-calc",
-        "bin/brain-gcd"
+        "bin/brain-gcd",
+        "bin/brain-progression"
     ],
     "description": "project-brain-games",
     "autoload": {
@@ -18,7 +19,8 @@
             "src/Games/Calc.php",
             "src/Games/Gcd.php",
             "src/Games/game0.php",
-            "src/Calc.php"
+            "src/Calc.php",
+            "src/Games/progression.php"
         ]
     },
     "authors": [
