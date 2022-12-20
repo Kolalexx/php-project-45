@@ -12,7 +12,7 @@ function greeting($name)
 
 function randomNumbers1()
 {
-    $minNumber = 1;
+    $minNumber = 2;
     $maxNumber1 = 50;
     return (rand($minNumber, $maxNumber1));
 }
