@@ -1,10 +1,10 @@
 #!/usr/bin/env php
 <?php
 
-namespace BrainGames\src\Number;
+namespace BrainGames\src\Games\Number;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function src\Number;
+use function src\Games\Number;
 
-firstGame();
+gameFirst();

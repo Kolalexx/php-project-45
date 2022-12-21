@@ -1,21 +1,24 @@
 <?php
 
-namespace BrainGames\src\Number;
+namespace BrainGames\src\Games\Number;
 
 use function cli\line;
 use function cli\prompt;
 
-function firstGame()
+use function BrainGames\src\Engine\greeting;
+use function BrainGames\src\Engine\randomNumbers1;
+use function BrainGames\src\Engine\wrong;
+use function BrainGames\src\Engine\congratulations;
+
+function gameFirst()
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    greeting($name);
     line('Answer "yes" if the number is even, otherwise answer "no".');
     $index = 0;
     while ($index < 3) {
-        $minNumber = 0;
-        $maxNumber = 100;
-        $numbers = rand($minNumber, $maxNumber);
+        $numbers = randomNumbers1();
         line("Question: %s!", $numbers);
         $answer = prompt('Your answer');
         if (((($numbers % 2) === 0) && ($answer === "yes")) || ((($numbers % 2) !== 0) && ($answer === "no"))) {
@@ -27,8 +30,8 @@ function firstGame()
             } else {
                 line("'$answer' is wrong answer ;(. Correct answer was 'no'.");
             }
-            return line("Let's try again, %s!", $name);
+            return wrong($name);
         }
     }
-    line("Congratulations, %s!", $name);
+    congratulations($name);
 }
