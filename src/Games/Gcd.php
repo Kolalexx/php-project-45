@@ -5,25 +5,17 @@ namespace BrainGames\src\Games\Gcd;
 use function cli\line;
 use function cli\prompt;
 
-function randomNumbers1()
-{
-    $minNumber = 1;
-    $maxNumber1 = 50;
-    return (rand($minNumber, $maxNumber1));
-}
-
-function randomNumbers2()
-{
-    $minNumber = 1;
-    $maxNumber2 = 10;
-    return (rand($minNumber, $maxNumber2));
-}
+use function BrainGames\src\Engine\greeting;
+use function BrainGames\src\Engine\randomNumbers1;
+use function BrainGames\src\Engine\randomNumbers2;
+use function BrainGames\src\Engine\wrong;
+use function BrainGames\src\Engine\congratulations;
 
 function gameThird()
 {
     line('Welcome to the Brain Game!');
     $name = prompt('May I have your name?');
-    line("Hello, %s!", $name);
+    greeting($name);
     line('Find the greatest common divisor of given numbers.');
     $index = 0;
     while ($index < 3) {
@@ -61,8 +53,8 @@ function gameThird()
             $index += 1;
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$result'.");
-            return line("Let's try again, %s!", $name);
+            return wrong($name);
         }
     }
-    line("Congratulations, %s!", $name);
+    congratulations($name);
 }
