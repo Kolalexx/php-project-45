@@ -34,3 +34,10 @@ function congratulations($name)
 {
     line("Congratulations, %s!", $name);
 }
+
+function randomOperation()
+{
+    $minNumber = 0;
+    $quantityOperation = 2;
+    return (rand($minNumber, $quantityOperation));
+}
