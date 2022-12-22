@@ -27,7 +27,6 @@ function randomNumbers2()
 function wrong($name)
 {
     line("Let's try again, %s!", $name);
-
 }
 
 function congratulations($name)

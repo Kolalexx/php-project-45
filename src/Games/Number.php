@@ -4,7 +4,6 @@ namespace BrainGames\src\Games\Number;
 
 use function cli\line;
 use function cli\prompt;
-
 use function BrainGames\src\Engine\greeting;
 use function BrainGames\src\Engine\randomNumbers1;
 use function BrainGames\src\Engine\wrong;
