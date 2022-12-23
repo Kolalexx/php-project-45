@@ -5,7 +5,7 @@ namespace BrainGames\src\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function greeting($name)
+function greeting(string $name)
 {
     line("Hello, %s!", $name);
 }
@@ -24,12 +24,12 @@ function randomNumbers2()
     return (rand($minNumber, $maxNumber2));
 }
 
-function wrong($name)
+function wrong(string $name)
 {
     line("Let's try again, %s!", $name);
 }
 
-function congratulations($name)
+function congratulations(string $name)
 {
     line("Congratulations, %s!", $name);
 }

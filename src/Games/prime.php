@@ -21,11 +21,14 @@ function gameFifth()
         $question = randomNumbers1();
         line("Question: %s!", $question);
         $answer = prompt('Your answer');
-        if ((in_array($question, $arr) && ($answer === "yes")) || (!in_array($question, $arr) && ($answer === "no"))) {
+        if (
+            (in_array($question, $arr, true) && ($answer === "yes")) ||
+            (!in_array($question, $arr, true) && ($answer === "no"))
+        ) {
             line('Correct!');
             $index += 1;
         } else {
-            if (in_array($question, $arr)) {
+            if (in_array($question, $arr, true)) {
                 line("'$answer' is wrong answer ;(. Correct answer was 'yes'.");
             } else {
                 line("'$answer' is wrong answer ;(. Correct answer was 'no'.");
