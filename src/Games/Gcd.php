@@ -12,7 +12,7 @@ use function BrainGames\src\Engine\congratulations;
 
 function gameThird()
 {
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     greeting($name);
     line('Find the greatest common divisor of given numbers.');

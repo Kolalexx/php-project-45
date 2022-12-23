@@ -13,7 +13,7 @@ use function BrainGames\src\Engine\randomOperation;
 
 function gameSecond()
 {
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     greeting($name);
     line('What is the result of the expression?');

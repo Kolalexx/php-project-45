@@ -11,7 +11,7 @@ use function BrainGames\src\Engine\congratulations;
 
 function gameFirst()
 {
-    line('Welcome to the Brain Game!');
+    line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     greeting($name);
     line('Answer "yes" if the number is even, otherwise answer "no".');
