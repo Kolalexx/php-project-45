@@ -56,16 +56,16 @@ $ make brain-prime
 ## Asciinema
 
 brain-even:
-https://asciinema.org/a/BIHO2bWVNHT6JZUzWHS7vXYDG
+[![asciicast](https://asciinema.org/a/h6eLGcRyxLniRKTROscnO93iz.svg)](https://asciinema.org/a/h6eLGcRyxLniRKTROscnO93iz)
 
 brain-calc:
-https://asciinema.org/a/JNOSyZSj8pLlCcTooVabpe3Ch
+[![asciicast](https://asciinema.org/a/KQCG5wQK5q5jgOhAWOiFfvqGh.svg)](https://asciinema.org/a/KQCG5wQK5q5jgOhAWOiFfvqGh)
 
 brain-gcd:
-https://asciinema.org/a/uccEelK1ZFyGjAWPvPikSEvGn
+[![asciicast](https://asciinema.org/a/EiAWUYvu6Oyh5UzhSU1bcCX8s.svg)](https://asciinema.org/a/EiAWUYvu6Oyh5UzhSU1bcCX8s)
 
 brain-progression:
-https://asciinema.org/a/Cl7wbQn004TM6CPqeYUiAaUlx
+[![asciicast](https://asciinema.org/a/UocWMOQYVFsKSEJOqOZG2sBy4.svg)](https://asciinema.org/a/UocWMOQYVFsKSEJOqOZG2sBy4)
 
 brain-prime:
-https://asciinema.org/a/EaOzhi9f5Q9hGVhgZpnizuPYN
+[![asciicast](https://asciinema.org/a/EaOzhi9f5Q9hGVhgZpnizuPYN.svg)](https://asciinema.org/a/EaOzhi9f5Q9hGVhgZpnizuPYN)
