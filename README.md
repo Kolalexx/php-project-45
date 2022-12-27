@@ -56,16 +56,21 @@ $ make brain-prime
 ## Asciinema
 
 brain-even:
+
 [![asciicast](https://asciinema.org/a/h6eLGcRyxLniRKTROscnO93iz.svg)](https://asciinema.org/a/h6eLGcRyxLniRKTROscnO93iz)
 
 brain-calc:
+
 [![asciicast](https://asciinema.org/a/KQCG5wQK5q5jgOhAWOiFfvqGh.svg)](https://asciinema.org/a/KQCG5wQK5q5jgOhAWOiFfvqGh)
 
 brain-gcd:
+
 [![asciicast](https://asciinema.org/a/EiAWUYvu6Oyh5UzhSU1bcCX8s.svg)](https://asciinema.org/a/EiAWUYvu6Oyh5UzhSU1bcCX8s)
 
 brain-progression:
+
 [![asciicast](https://asciinema.org/a/UocWMOQYVFsKSEJOqOZG2sBy4.svg)](https://asciinema.org/a/UocWMOQYVFsKSEJOqOZG2sBy4)
 
 brain-prime:
+
 [![asciicast](https://asciinema.org/a/EaOzhi9f5Q9hGVhgZpnizuPYN.svg)](https://asciinema.org/a/EaOzhi9f5Q9hGVhgZpnizuPYN)
