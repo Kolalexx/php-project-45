@@ -12,6 +12,7 @@ use function BrainGames\src\Engine\randomOperation;
 function calculateMathExercise()
 {
     $arrayQuestion = [];
+    $arrayRightAnswer = [];
     for ($i = 0; $i < 3; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();

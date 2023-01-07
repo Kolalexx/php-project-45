@@ -41,7 +41,7 @@ function randomOperation()
     return (rand($minNumber, $quantityOperation));
 }
 
-function goPlay($arrayQuestion, $arrayRightAnswer, $condition)
+function goPlay(array $arrayQuestion, array $arrayRightAnswer, string $condition)
 {
     line('Welcome to the Brain Games!');
     $namePlayer = prompt('May I have your name?');
