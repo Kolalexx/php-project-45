@@ -50,7 +50,7 @@ function goPlay($arrayQuestion, $arrayRightAnswer, $condition)
     for ($i = 0; $i < 3; $i++) {
         line("Question: %s!", $arrayQuestion[$i]);
         $answer = prompt('Your answer');
-        if ($answer === $arrayRightAnswer[$i]) {
+        if ($answer == $arrayRightAnswer[$i]) {
             line('Correct!');
         } else {
             line("'$answer' is wrong answer ;(. Correct answer was '$arrayRightAnswer[$i]'.");

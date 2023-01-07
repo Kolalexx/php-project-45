@@ -25,6 +25,6 @@ function checkIfNumberIsEven()
     }
 
     $condition = 'Answer "yes" if the number is even, otherwise answer "no".';
-    
+
     goPlay($arrayQuestion, $arrayRightAnswer, $condition);
 }
