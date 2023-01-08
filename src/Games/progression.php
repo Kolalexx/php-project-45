@@ -30,5 +30,4 @@ function findMissingNumberInProgression()
     $condition = 'What number is missing in the progression?';
 
     goPlay($arrayQuestion, $arrayRightAnswer, $condition);
-
 }
