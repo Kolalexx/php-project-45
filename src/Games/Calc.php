@@ -5,11 +5,29 @@ namespace BrainGames\src\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-use function BrainGames\src\Engine\randomNumbers1;
-use function BrainGames\src\Engine\randomNumbers2;
-use function BrainGames\src\Engine\randomOperation;
 
 const LEVELS = 3;
+
+function randomNumbers1()
+{
+    $minNumber = 2;
+    $maxNumber1 = 50;
+    return (rand($minNumber, $maxNumber1));
+}
+
+function randomNumbers2()
+{
+    $minNumber = 1;
+    $maxNumber2 = 9;
+    return (rand($minNumber, $maxNumber2));
+}
+
+function randomOperation()
+{
+    $minNumber = 0;
+    $quantityOperation = 2;
+    return (rand($minNumber, $quantityOperation));
+}
 
 function calculateMathExercise()
 {

@@ -5,10 +5,22 @@ namespace BrainGames\src\Games\progression;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-use function BrainGames\src\Engine\randomNumbers1;
-use function BrainGames\src\Engine\randomNumbers2;
 
 const LEVELS = 3;
+
+function randomNumbers1()
+{
+    $minNumber = 2;
+    $maxNumber1 = 50;
+    return (rand($minNumber, $maxNumber1));
+}
+
+function randomNumbers2()
+{
+    $minNumber = 1;
+    $maxNumber2 = 9;
+    return (rand($minNumber, $maxNumber2));
+}
 
 function findMissingNumberInProgression()
 {

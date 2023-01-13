@@ -5,27 +5,6 @@ namespace BrainGames\src\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function randomNumbers1()
-{
-    $minNumber = 2;
-    $maxNumber1 = 50;
-    return (rand($minNumber, $maxNumber1));
-}
-
-function randomNumbers2()
-{
-    $minNumber = 1;
-    $maxNumber2 = 9;
-    return (rand($minNumber, $maxNumber2));
-}
-
-function randomOperation()
-{
-    $minNumber = 0;
-    $quantityOperation = 2;
-    return (rand($minNumber, $quantityOperation));
-}
-
 const LEVELS = 3;
 
 function goPlay(array $arrayQuestion, array $arrayRightAnswer, string $condition)

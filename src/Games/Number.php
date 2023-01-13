@@ -5,15 +5,21 @@ namespace BrainGames\src\Games\Number;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-use function BrainGames\src\Engine\randomNumbers1;
 
 const LEVELS = 3;
+
+function randomNumbers()
+{
+    $minNumber = 2;
+    $maxNumber1 = 50;
+    return (rand($minNumber, $maxNumber1));
+}
 
 function checkIfNumberIsEven()
 {
     $arrayQuestion = [];
     for ($i = 0; $i < LEVELS; $i++) {
-        $randomNumber = randomNumbers1();
+        $randomNumber = randomNumbers();
         $arrayQuestion[$i] = $randomNumber;
     }
 
