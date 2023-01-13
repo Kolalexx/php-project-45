@@ -9,11 +9,13 @@ use function BrainGames\src\Engine\randomNumbers1;
 use function BrainGames\src\Engine\randomNumbers2;
 use function BrainGames\src\Engine\randomOperation;
 
+const LEVELS = 3;
+
 function calculateMathExercise()
 {
     $arrayQuestion = [];
     $arrayRightAnswer = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < LEVELS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
         $operation = randomOperation();

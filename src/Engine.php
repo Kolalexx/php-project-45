@@ -26,13 +26,15 @@ function randomOperation()
     return (rand($minNumber, $quantityOperation));
 }
 
+const LEVELS = 3;
+
 function goPlay(array $arrayQuestion, array $arrayRightAnswer, string $condition)
 {
     line('Welcome to the Brain Games!');
     $namePlayer = prompt('May I have your name?');
     line("Hello, %s!", $namePlayer);
     line($condition);
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < LEVELS; $i++) {
         line("Question: %s!", $arrayQuestion[$i]);
         $answer = prompt('Your answer');
         if ($answer == $arrayRightAnswer[$i]) {

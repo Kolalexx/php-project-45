@@ -8,11 +8,13 @@ use function BrainGames\src\Engine\goPlay;
 use function BrainGames\src\Engine\randomNumbers1;
 use function BrainGames\src\Engine\randomNumbers2;
 
+const LEVELS = 3;
+
 function findGreateasCommonDivisor()
 {
     $arrayQuestion = [];
     $arrayRightAnswer = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < LEVELS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
         $result = 1;

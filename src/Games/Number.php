@@ -7,16 +7,18 @@ use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 use function BrainGames\src\Engine\randomNumbers1;
 
+const LEVELS = 3;
+
 function checkIfNumberIsEven()
 {
     $arrayQuestion = [];
-    for ($i = 0; $i < 3; $i++) {
+    for ($i = 0; $i < LEVELS; $i++) {
         $randomNumber = randomNumbers1();
         $arrayQuestion[$i] = $randomNumber;
     }
 
     $arrayRightAnswer = [];
-    for ($j = 0; $j < 3; $j++) {
+    for ($j = 0; $j < LEVELS; $j++) {
         if (($arrayQuestion[$j] % 2) === 0) {
             $arrayRightAnswer[$j] = 'yes';
         } else {
