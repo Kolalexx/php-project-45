@@ -1,6 +1,6 @@
 <?php
 
-namespace BrainGames\src\Games\progression;
+namespace BrainGames\src\Games\Progression;
 
 use function cli\line;
 use function cli\prompt;
