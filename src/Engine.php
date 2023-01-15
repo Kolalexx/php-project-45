@@ -5,21 +5,19 @@ namespace BrainGames\src\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const LEVELS = 3;
-
-function goPlay(array $arrayQuestion, array $arrayRightAnswer, string $condition)
+function goPlay(array $questionsAndAnswers, string $condition)
 {
     line('Welcome to the Brain Games!');
     $namePlayer = prompt('May I have your name?');
     line("Hello, %s!", $namePlayer);
     line($condition);
-    for ($i = 0; $i < LEVELS; $i++) {
-        line("Question: %s!", $arrayQuestion[$i]);
+    foreach ($questionsAndAnswers as $question => $rightAnswer) {
+        line("Question: %s!", $question);
         $answer = prompt('Your answer');
-        if ($answer == $arrayRightAnswer[$i]) {
+        if ($answer == $rightAnswer) {
             line('Correct!');
         } else {
-            line("'$answer' is wrong answer ;(. Correct answer was '$arrayRightAnswer[$i]'.");
+            line("'$answer' is wrong answer ;(. Correct answer was '$rightAnswer'.");
             return line("Let's try again, %s!", $namePlayer);
         }
     }

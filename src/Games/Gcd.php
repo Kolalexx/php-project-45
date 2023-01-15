@@ -24,8 +24,7 @@ function randomNumbers2()
 
 function findGreateasCommonDivisor()
 {
-    $arrayQuestion = [];
-    $arrayRightAnswer = [];
+    $questionsAndAnswers = [];
     for ($i = 0; $i < LEVELS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
@@ -44,11 +43,10 @@ function findGreateasCommonDivisor()
                 }
             }
         }
-        $arrayQuestion[$i] = $question;
-        $arrayRightAnswer[$i] = $result;
+        $questionsAndAnswers[$question] = $result;
     }
 
     $condition = 'Find the greatest common divisor of given numbers.';
 
-    goPlay($arrayQuestion, $arrayRightAnswer, $condition);
+    goPlay($questionsAndAnswers, $condition);
 }

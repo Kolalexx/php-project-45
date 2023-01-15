@@ -24,8 +24,7 @@ function randomNumbers2()
 
 function findMissingNumberInProgression()
 {
-    $arrayQuestion = [];
-    $arrayRightAnswer = [];
+    $questionsAndAnswers = [];
     for ($i = 0; $i < LEVELS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
@@ -37,11 +36,10 @@ function findMissingNumberInProgression()
         $missingNumber = $progression[$randomNumber3];
         $progression[$randomNumber3] = '..';
         $question = implode(' ', $progression);
-        $arrayQuestion[$i] = $question;
-        $arrayRightAnswer[$i] = $missingNumber;
+        $questionsAndAnswers[$question] = $missingNumber;
     }
 
     $condition = 'What number is missing in the progression?';
 
-    goPlay($arrayQuestion, $arrayRightAnswer, $condition);
+    goPlay($questionsAndAnswers, $condition);
 }

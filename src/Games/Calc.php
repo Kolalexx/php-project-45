@@ -31,8 +31,7 @@ function randomOperation()
 
 function calculateMathExercise()
 {
-    $arrayQuestion = [];
-    $arrayRightAnswer = [];
+    $questionsAndAnswers = [];
     for ($i = 0; $i < LEVELS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
@@ -48,11 +47,10 @@ function calculateMathExercise()
             $question = ("$randomNumber1 * $randomNumber2");
             $result = ($result + $randomNumber1) * $randomNumber2;
         }
-        $arrayQuestion[$i] = $question;
-        $arrayRightAnswer[$i] = $result;
+        $questionsAndAnswers[$question] = $result;
     }
 
     $condition = 'What is the result of the expression?';
 
-    goPlay($arrayQuestion, $arrayRightAnswer, $condition);
+    goPlay($questionsAndAnswers, $condition);
 }
