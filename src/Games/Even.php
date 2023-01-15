@@ -18,7 +18,7 @@ function randomNumbers()
 function checkIfNumberIsEven()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < LEVELS; $i++) {
+    for ($i = 1; $i <= LEVELS; $i++) {
         $question = randomNumbers();
         if (($question % 2) === 0) {
             $questionsAndAnswers[$question] = 'yes';
