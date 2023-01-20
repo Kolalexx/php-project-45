@@ -29,7 +29,7 @@ function randomOperation()
     return (rand($minNumber, $quantityOperation));
 }
 
-function calculateMathExercise()
+function startGameCalculator()
 {
     $questionsAndAnswers = [];
     for ($i = 0; $i < LEVELS; $i++) {

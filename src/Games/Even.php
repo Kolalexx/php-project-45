@@ -15,7 +15,7 @@ function randomNumbers()
     return (rand($minNumber, $maxNumber1));
 }
 
-function checkIfNumberIsEven()
+function startGameCheckNumberIsEven()
 {
     $questionsAndAnswers = [];
     for ($i = 1; $i <= LEVELS; $i++) {

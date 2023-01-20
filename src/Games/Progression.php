@@ -22,7 +22,7 @@ function randomNumbers2()
     return (rand($minNumber, $maxNumber2));
 }
 
-function findMissingNumberInProgression()
+function startGameFindMissingNumberInProgression()
 {
     $questionsAndAnswers = [];
     for ($i = 0; $i < LEVELS; $i++) {
