@@ -17,25 +17,19 @@ function randomNumbers()
     return (rand($minNumber, $maxNumber1));
 }
 
-function randomOperation()
-{
-    $minNumber = 0;
-    $quantityOperation = 2;
-    return (rand($minNumber, $quantityOperation));
-}
-
 function startGameCalculator()
 {
+    $operations = ['+' => '+', '-' => '-', '*' => '*'];
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $randomNumber1 = randomNumbers();
         $randomNumber2 = randomNumbers();
-        $operation = randomOperation();
+        $operation = array_rand($operations);
         $result = 0;
-        if ($operation === 0) {
+        if ($operation === '+') {
             $question = "$randomNumber1 + $randomNumber2";
             $result = $result + $randomNumber1 + $randomNumber2;
-        } elseif ($operation === 1) {
+        } elseif ($operation === '-') {
             $question = "$randomNumber1 - $randomNumber2";
             $result = $result + $randomNumber1 - $randomNumber2;
         } else {
