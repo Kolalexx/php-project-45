@@ -10,26 +10,19 @@ const ROUNDS = 3;
 
 const CONDITION = 'Find the greatest common divisor of given numbers.';
 
-function randomNumbers1()
+function randomNumbers()
 {
     $minNumber = 2;
-    $maxNumber1 = 50;
+    $maxNumber1 = 20;
     return (rand($minNumber, $maxNumber1));
-}
-
-function randomNumbers2()
-{
-    $minNumber = 1;
-    $maxNumber2 = 9;
-    return (rand($minNumber, $maxNumber2));
 }
 
 function startGameGreateasCommonDivisor()
 {
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDS; $i++) {
-        $randomNumber1 = randomNumbers1();
-        $randomNumber2 = randomNumbers2();
+        $randomNumber1 = randomNumbers();
+        $randomNumber2 = randomNumbers();
         $result = 1;
         $question = "$randomNumber1 $randomNumber2";
         if ($randomNumber1 === $randomNumber2) {
