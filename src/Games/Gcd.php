@@ -6,7 +6,9 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 
-const LEVELS = 3;
+const ROUNDS = 3;
+
+const CONDITION = 'Find the greatest common divisor of given numbers.';
 
 function randomNumbers1()
 {
@@ -25,7 +27,7 @@ function randomNumbers2()
 function startGameGreateasCommonDivisor()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < LEVELS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
         $result = 1;
@@ -46,7 +48,5 @@ function startGameGreateasCommonDivisor()
         $questionsAndAnswers[$question] = $result;
     }
 
-    $condition = 'Find the greatest common divisor of given numbers.';
-
-    goPlay($questionsAndAnswers, $condition);
+    goPlay($questionsAndAnswers, $condition = CONDITION);
 }

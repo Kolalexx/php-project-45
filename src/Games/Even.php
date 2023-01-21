@@ -6,7 +6,9 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 
-const LEVELS = 3;
+const ROUNDS = 3;
+
+const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 function randomNumbers()
 {
@@ -18,7 +20,7 @@ function randomNumbers()
 function startGameCheckNumberIsEven()
 {
     $questionsAndAnswers = [];
-    for ($i = 1; $i <= LEVELS; $i++) {
+    for ($i = 1; $i <= ROUNDS; $i++) {
         $question = randomNumbers();
         if (($question % 2) === 0) {
             $questionsAndAnswers[$question] = 'yes';
@@ -27,7 +29,5 @@ function startGameCheckNumberIsEven()
         }
     }
 
-    $condition = 'Answer "yes" if the number is even, otherwise answer "no".';
-
-    goPlay($questionsAndAnswers, $condition);
+    goPlay($questionsAndAnswers, $condition = CONDITION);
 }

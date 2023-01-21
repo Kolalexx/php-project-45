@@ -6,7 +6,11 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 
-const LEVELS = 3;
+const ROUNDS = 3;
+
+const LENGTHPROGRESSION = 8;
+
+const CONDITION = 'What number is missing in the progression?';
 
 function randomNumbers1()
 {
@@ -18,19 +22,19 @@ function randomNumbers1()
 function randomNumbers2()
 {
     $minNumber = 1;
-    $maxNumber2 = 9;
+    $maxNumber2 = (LENGTHPROGRESSION - 1);
     return (rand($minNumber, $maxNumber2));
 }
 
 function startGameFindMissingNumberInProgression()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < LEVELS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
         $randomNumber3 = randomNumbers2();
         $progression = [];
-        for ($j = 0; $j < 10; $j++) {
+        for ($j = 0; $j < LENGTHPROGRESSION; $j++) {
             $progression[$j] = $randomNumber1 + $j * $randomNumber2;
         }
         $missingNumber = $progression[$randomNumber3];
@@ -39,7 +43,5 @@ function startGameFindMissingNumberInProgression()
         $questionsAndAnswers[$question] = $missingNumber;
     }
 
-    $condition = 'What number is missing in the progression?';
-
-    goPlay($questionsAndAnswers, $condition);
+    goPlay($questionsAndAnswers, $condition = CONDITION);
 }

@@ -6,7 +6,9 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 
-const LEVELS = 3;
+const ROUNDS = 3;
+
+const CONDITION = 'What is the result of the expression?';
 
 function randomNumbers1()
 {
@@ -32,7 +34,7 @@ function randomOperation()
 function startGameCalculator()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < LEVELS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
         $operation = randomOperation();
@@ -50,7 +52,5 @@ function startGameCalculator()
         $questionsAndAnswers[$question] = $result;
     }
 
-    $condition = 'What is the result of the expression?';
-
-    goPlay($questionsAndAnswers, $condition);
+    goPlay($questionsAndAnswers, $condition = CONDITION);
 }
