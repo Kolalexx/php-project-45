@@ -19,22 +19,24 @@ function randomNumbers()
 
 function startGameCalculator()
 {
-    $operations = ['+' => '+', '-' => '-', '*' => '*'];
+    $operations = ['+', '-', '*'];
     $questionsAndAnswers = [];
     for ($i = 0; $i < ROUNDS; $i++) {
         $randomNumber1 = randomNumbers();
         $randomNumber2 = randomNumbers();
-        $operation = array_rand($operations);
-        $result = 0;
-        if ($operation === '+') {
-            $question = "$randomNumber1 + $randomNumber2";
-            $result = $result + $randomNumber1 + $randomNumber2;
-        } elseif ($operation === '-') {
-            $question = "$randomNumber1 - $randomNumber2";
-            $result = $result + $randomNumber1 - $randomNumber2;
-        } else {
-            $question = ("$randomNumber1 * $randomNumber2");
-            $result = ($result + $randomNumber1) * $randomNumber2;
+        $operation = $operations[array_rand($operations)];
+        switch ($operation) {
+            case '+':
+                $question = "$randomNumber1 + $randomNumber2";
+                $result = $randomNumber1 + $randomNumber2;
+                break;
+            case '-':
+                $question = "$randomNumber1 - $randomNumber2";
+                $result = $randomNumber1 - $randomNumber2;
+                break;
+            default:
+                $question = ("$randomNumber1 * $randomNumber2");
+                $result = $randomNumber1 * $randomNumber2;
         }
         $questionsAndAnswers[$question] = $result;
     }
