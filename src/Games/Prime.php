@@ -21,7 +21,7 @@ function startGameCheckNumberIsPrime()
 {
     $questionsAndAnswers = [];
     $primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
-    for ($i = 1; $i <= ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $question = randomNumbers();
         if (in_array($question, $primeNumbers, true)) {
             $questionsAndAnswers[$question] = 'yes';
