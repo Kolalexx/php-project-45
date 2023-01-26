@@ -5,6 +5,7 @@ namespace BrainGames\src\Games\Even;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
+
 use const BrainGames\src\Engine\ROUNDS;
 
 const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".';

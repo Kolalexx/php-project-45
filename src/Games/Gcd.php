@@ -5,6 +5,7 @@ namespace BrainGames\src\Games\Gcd;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
+
 use const BrainGames\src\Engine\ROUNDS;
 
 const CONDITION = 'Find the greatest common divisor of given numbers.';

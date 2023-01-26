@@ -5,6 +5,7 @@ namespace BrainGames\src\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
+
 use const BrainGames\src\Engine\ROUNDS;
 
 const LENGTHPROGRESSION = 8;
