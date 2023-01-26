@@ -20,7 +20,7 @@ function startGameCalculator()
 {
     $operations = ['+', '-', '*'];
     $questionsAndAnswers = [];
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 1; $i <= ROUNDS; $i++) {
         $randomNumber1 = randomNumbers();
         $randomNumber2 = randomNumbers();
         $operation = $operations[array_rand($operations)];

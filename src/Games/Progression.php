@@ -28,7 +28,7 @@ function randomNumbers2()
 function startGameFindMissingNumberInProgression()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($i = 1; $i <= ROUNDS; $i++) {
         $randomNumber1 = randomNumbers1();
         $randomNumber2 = randomNumbers2();
         $randomNumber3 = randomNumbers2();
