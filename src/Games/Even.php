@@ -19,7 +19,7 @@ function randomNumbers()
 function startGameCheckNumberIsEven()
 {
     $questionsAndAnswers = [];
-    for ($i = 1; $i <= ROUNDS; $i++) {
+    for ($i = 0; $i < ROUNDS; $i++) {
         $question = randomNumbers();
         if (($question % 2) === 0) {
             $questionsAndAnswers[$question] = 'yes';
