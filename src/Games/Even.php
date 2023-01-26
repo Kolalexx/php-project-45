@@ -5,8 +5,7 @@ namespace BrainGames\src\Games\Even;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-
-const ROUNDS = 3;
+use const BrainGames\src\Engine\ROUNDS;
 
 const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -29,5 +28,5 @@ function startGameCheckNumberIsEven()
         }
     }
 
-    goPlay($questionsAndAnswers, $condition = CONDITION);
+    goPlay($questionsAndAnswers, CONDITION);
 }

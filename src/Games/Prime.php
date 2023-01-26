@@ -5,8 +5,7 @@ namespace BrainGames\src\Games\Prime;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-
-const ROUNDS = 3;
+use const BrainGames\src\Engine\ROUNDS;
 
 const CONDITION = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -30,5 +29,5 @@ function startGameCheckNumberIsPrime()
         }
     }
 
-    goPlay($questionsAndAnswers, $condition = CONDITION);
+    goPlay($questionsAndAnswers, CONDITION);
 }

@@ -5,8 +5,7 @@ namespace BrainGames\src\Games\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-
-const ROUNDS = 3;
+use const BrainGames\src\Engine\ROUNDS;
 
 const CONDITION = 'What is the result of the expression?';
 
@@ -41,5 +40,5 @@ function startGameCalculator()
         $questionsAndAnswers[$question] = $result;
     }
 
-    goPlay($questionsAndAnswers, $condition = CONDITION);
+    goPlay($questionsAndAnswers, CONDITION);
 }

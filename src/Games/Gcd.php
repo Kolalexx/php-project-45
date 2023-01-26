@@ -5,8 +5,7 @@ namespace BrainGames\src\Games\Gcd;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-
-const ROUNDS = 3;
+use const BrainGames\src\Engine\ROUNDS;
 
 const CONDITION = 'Find the greatest common divisor of given numbers.';
 
@@ -41,5 +40,5 @@ function startGameGreateasCommonDivisor()
         $questionsAndAnswers[$question] = $result;
     }
 
-    goPlay($questionsAndAnswers, $condition = CONDITION);
+    goPlay($questionsAndAnswers, CONDITION);
 }

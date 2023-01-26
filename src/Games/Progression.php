@@ -5,8 +5,7 @@ namespace BrainGames\src\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
-
-const ROUNDS = 3;
+use const BrainGames\src\Engine\ROUNDS;
 
 const LENGTHPROGRESSION = 8;
 
@@ -43,5 +42,5 @@ function startGameFindMissingNumberInProgression()
         $questionsAndAnswers[$question] = $missingNumber;
     }
 
-    goPlay($questionsAndAnswers, $condition = CONDITION);
+    goPlay($questionsAndAnswers, CONDITION);
 }
