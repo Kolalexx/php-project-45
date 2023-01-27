@@ -20,7 +20,7 @@ function randomNumbers()
 function startGameGreateasCommonDivisor()
 {
     $questionsAndAnswers = [];
-    for ($i = 0; $i < ROUNDS; $i++) {
+    for ($index = 0; $index < ROUNDS; $index++) {
         $randomNumber1 = randomNumbers();
         $randomNumber2 = randomNumbers();
         $result = 1;
