@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 
-use const BrainGames\src\Engine\ROUNDS;
+use const BrainGames\src\Engine\ROUNDS_COUNT;
 
 const CONDITION = 'What is the result of the expression?';
 
@@ -21,7 +21,7 @@ function startGameCalculator()
 {
     $operations = ['+', '-', '*'];
     $questionsAndAnswers = [];
-    for ($index = 1; $index <= ROUNDS; $index++) {
+    for ($index = 1; $index <= ROUNDS_COUNT; $index++) {
         $randomNumber1 = randomNumbers();
         $randomNumber2 = randomNumbers();
         $operation = $operations[array_rand($operations)];

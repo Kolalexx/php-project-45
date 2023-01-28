@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 
-use const BrainGames\src\Engine\ROUNDS;
+use const BrainGames\src\Engine\ROUNDS_COUNT;
 
 const CONDITION = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -20,7 +20,7 @@ function randomNumbers()
 function startGameCheckNumberIsEven()
 {
     $questionsAndAnswers = [];
-    for ($index = 0; $index < ROUNDS; $index++) {
+    for ($index = 0; $index < ROUNDS_COUNT; $index++) {
         $question = randomNumbers();
         if (($question % 2) === 0) {
             $questionsAndAnswers[$question] = 'yes';

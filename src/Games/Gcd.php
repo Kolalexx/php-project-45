@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\src\Engine\goPlay;
 
-use const BrainGames\src\Engine\ROUNDS;
+use const BrainGames\src\Engine\ROUNDS_COUNT;
 
 const CONDITION = 'Find the greatest common divisor of given numbers.';
 
@@ -20,7 +20,7 @@ function randomNumbers()
 function startGameGreateasCommonDivisor()
 {
     $questionsAndAnswers = [];
-    for ($index = 0; $index < ROUNDS; $index++) {
+    for ($index = 0; $index < ROUNDS_COUNT; $index++) {
         $randomNumber1 = randomNumbers();
         $randomNumber2 = randomNumbers();
         $result = 1;

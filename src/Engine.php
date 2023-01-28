@@ -5,7 +5,7 @@ namespace BrainGames\src\Engine;
 use function cli\line;
 use function cli\prompt;
 
-const ROUNDS = 3;
+const ROUNDS_COUNT = 3;
 
 function goPlay(array $questionsAndAnswers, string $condition)
 {
