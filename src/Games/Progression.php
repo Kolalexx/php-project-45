@@ -30,15 +30,15 @@ function startGameFindMissingNumberInProgression()
 {
     $questionsAndAnswers = [];
     for ($index = 1; $index <= ROUNDS; $index++) {
-        $randomNumber1 = randomNumbers1();
-        $randomNumber2 = randomNumbers2();
-        $randomNumber3 = randomNumbers2();
+        $firstNumberOfProgression = randomNumbers1();
+        $stepProgression = randomNumbers2();
+        $numberOfMissingMember = randomNumbers2();
         $progression = [];
         for ($j = 0; $j < LENGTHPROGRESSION; $j++) {
-            $progression[$j] = $randomNumber1 + $j * $randomNumber2;
+            $progression[$j] = $firstNumberOfProgression + $j * $stepProgression;
         }
-        $missingNumber = $progression[$randomNumber3];
-        $progression[$randomNumber3] = '..';
+        $missingNumber = $progression[$numberOfMissingMember];
+        $progression[$numberOfMissingMember] = '..';
         $question = implode(' ', $progression);
         $questionsAndAnswers[$question] = $missingNumber;
     }
