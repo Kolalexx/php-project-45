@@ -28,7 +28,7 @@ function calculate(int $randomNumber1, int $randomNumber2, string $operation)
             break;
         default:
             $result = $randomNumber1 * $randomNumber2;
-        }
+    }
     return $result;
 }
 
