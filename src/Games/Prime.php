@@ -20,10 +20,9 @@ function randomNumbers()
 function startGameCheckNumberIsPrime()
 {
     $questionsAndAnswers = [];
-    $primeNumbers = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47];
     for ($index = 0; $index < ROUNDS; $index++) {
         $question = randomNumbers();
-        if (in_array($question, $primeNumbers, true)) {
+        if (gmp_prob_prime($question) === 2) {
             $questionsAndAnswers[$question] = 'yes';
         } else {
             $questionsAndAnswers[$question] = 'no';
