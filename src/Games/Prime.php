@@ -17,12 +17,27 @@ function randomNumbers()
     return (rand($minNumber, $maxNumber1));
 }
 
+function isPrime(int $number)
+{
+    $devisors = 0;
+    for ($j = 1; $j <= $number; $j++) {
+        if (($number % $j) === 0) {
+            $devisors += 1;
+        }
+    }
+    if ($devisors === 2) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function startGameCheckNumberIsPrime()
 {
     $questionsAndAnswers = [];
     for ($index = 0; $index < ROUNDS_COUNT; $index++) {
         $question = randomNumbers();
-        if (gmp_prob_prime($question) === 2) {
+        if (isPrime($question) === true) {
             $questionsAndAnswers[$question] = 'yes';
         } else {
             $questionsAndAnswers[$question] = 'no';

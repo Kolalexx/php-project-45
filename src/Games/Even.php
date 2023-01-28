@@ -17,12 +17,21 @@ function randomNumbers()
     return (rand($minNumber, $maxNumber1));
 }
 
+function isEven(int $number)
+{
+    if (($number % 2) === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function startGameCheckNumberIsEven()
 {
     $questionsAndAnswers = [];
     for ($index = 0; $index < ROUNDS_COUNT; $index++) {
         $question = randomNumbers();
-        if (($question % 2) === 0) {
+        if (isEven($question) === true) {
             $questionsAndAnswers[$question] = 'yes';
         } else {
             $questionsAndAnswers[$question] = 'no';

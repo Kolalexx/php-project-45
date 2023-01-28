@@ -17,6 +17,21 @@ function randomNumbers()
     return (rand($minNumber, $maxNumber1));
 }
 
+function calculate(int $randomNumber1, int $randomNumber2, string $operation)
+{
+    switch ($operation) {
+        case '+':
+            $result = $randomNumber1 + $randomNumber2;
+            break;
+        case '-':
+            $result = $randomNumber1 - $randomNumber2;
+            break;
+        default:
+            $result = $randomNumber1 * $randomNumber2;
+        }
+    return $result;
+}
+
 function startGameCalculator()
 {
     $operations = ['+', '-', '*'];
@@ -25,20 +40,8 @@ function startGameCalculator()
         $randomNumber1 = randomNumbers();
         $randomNumber2 = randomNumbers();
         $operation = $operations[array_rand($operations)];
-        switch ($operation) {
-            case '+':
-                $question = "$randomNumber1 + $randomNumber2";
-                $result = $randomNumber1 + $randomNumber2;
-                break;
-            case '-':
-                $question = "$randomNumber1 - $randomNumber2";
-                $result = $randomNumber1 - $randomNumber2;
-                break;
-            default:
-                $question = ("$randomNumber1 * $randomNumber2");
-                $result = $randomNumber1 * $randomNumber2;
-        }
-        $questionsAndAnswers[$question] = $result;
+        $question = "$randomNumber1 $operation $randomNumber2";
+        $questionsAndAnswers[$question] = calculate($randomNumber1, $randomNumber2, $operation);
     }
 
     goPlay($questionsAndAnswers, CONDITION);
